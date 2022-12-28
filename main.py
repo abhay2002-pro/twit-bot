@@ -673,7 +673,7 @@ async def bag(ctx):
     total_item = []
     for item in items:
         print(items)
-        total_item[item.name] += int(amount)
+        total_item[item.name] += int(item.amount)
     print(item)
 
 
@@ -683,5 +683,5 @@ async def eightball(ctx, *, question):
                  "It is decidedly no.", "Most likely", "My reply is NO.", "My sources say NO.", "Outlook not so good", "Outlook good!", "Signs point to yes!", "Without a doubt!!"]
     await ctx.send(f"**Question:** {question}\n**Answers:** {random.choice(responses)}")
 
-
-bot.run("MTA0MjUyOTM5MTMyODEwNDQ4OA.GLtS6q.DWTFb_GoezczLuERxTgxRs5E62SnJX7EJeyKAs")
+DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
+bot.run(DISCORD_TOKEN);
